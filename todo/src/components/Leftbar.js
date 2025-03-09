@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Navbar, Nav, Offcanvas, Button, Container } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import { RiTodoLine } from "react-icons/ri";
 import { FiMenu } from "react-icons/fi";
+
 
 const Leftbar = () => {
   const [show, setShow] = useState(false);
@@ -28,8 +30,8 @@ const Leftbar = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <Nav.Link href="/" onClick={handleClose}>Home</Nav.Link>
-            <Nav.Link href="/tasks" onClick={handleClose}>Tasks</Nav.Link>
+            <Link to="/" onClick={handleClose}>Home</Link>
+            <Link to="/tasks" onClick={handleClose}>Tasks</Link>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
